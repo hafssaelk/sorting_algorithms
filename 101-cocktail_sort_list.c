@@ -6,13 +6,10 @@ void cocktail_sort_list(listint_t **list);
 
 /**
  * swap_node_ahead - Swap a node in a listint_t doubly-linked list
- *                   of integers with the node ahead of it.
+ *                   list of integers with the node ahead of it.
  * @list: A pointer to the head of a doubly-linked list of integers.
  * @tail: A pointer to the tail of the doubly-linked list.
  * @shaker: A pointer to the current swapping node of the cocktail shaker algo.
- *
- * Description: This function swaps a node with the node ahead of it in a
- *              listint_t doubly-linked list, updating pointers accordingly.
  */
 void swap_node_ahead(listint_t **list, listint_t **tail, listint_t **shaker)
 {
@@ -39,9 +36,6 @@ void swap_node_ahead(listint_t **list, listint_t **tail, listint_t **shaker)
  * @list: A pointer to the head of a doubly-linked list of integers.
  * @tail: A pointer to the tail of the doubly-linked list.
  * @shaker: A pointer to the current swapping node of the cocktail shaker algo.
- *
- * Description: This function swaps a node with the node behind it in a
- *              listint_t doubly-linked list, updating pointers accordingly.
  */
 void swap_node_behind(listint_t **list, listint_t **tail, listint_t **shaker)
 {
@@ -66,10 +60,6 @@ void swap_node_behind(listint_t **list, listint_t **tail, listint_t **shaker)
  * cocktail_sort_list - Sort a listint_t doubly-linked list of integers in
  *                      ascending order using the cocktail shaker algorithm.
  * @list: A pointer to the head of a listint_t doubly-linked list.
- *
- * Description: This function sorts the list using the cocktail shaker algorithm,
- *              continuously swapping nodes until the list is sorted in ascending order.
- *              Prints the list after each swap.
  */
 void cocktail_sort_list(listint_t **list)
 {
@@ -95,7 +85,7 @@ void cocktail_sort_list(listint_t **list)
 			}
 		}
 		for (shaker = shaker->prev; shaker != *list;
-			 shaker = shaker->prev)
+				shaker = shaker->prev)
 		{
 			if (shaker->n < shaker->prev->n)
 			{
