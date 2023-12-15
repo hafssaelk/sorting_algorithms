@@ -1,5 +1,9 @@
 #include "sort.h"
 
+void swap_ints(int *a, int *b);
+void max_heapify(int *array, size_t size, size_t base, size_t root);
+void heap_sort(int *array, size_t size);
+
 /**
  * swap_ints - Swap two integers in an array.
  * @a: The first integer to swap.
@@ -20,12 +24,6 @@ void swap_ints(int *a, int *b)
  * @size: The size of the array/tree.
  * @base: The index of the base row of the tree.
  * @root: The root node of the binary tree.
- *
- * Description: This function ensures that the subtree rooted at the given
- *              node follows the max-heap property. It compares the root
- *              with its left and right children and swaps the root with
- *              the larger child if necessary, then recursively calls
- *              itself on the swapped child. It prints the array after each swap.
  */
 void max_heapify(int *array, size_t size, size_t base, size_t root)
 {
